@@ -7,6 +7,7 @@ export const SITE_DESCRIPTION =
 export const KAYZ_URL = "https://kayzcharmzz.grok.me";
 export const SPARKLE_URL = "https://aurora-brook-zest-cosmic.grok.me";
 
+export const STUDIO_CONTACT = "Lana Moss";
 export const STUDIO_EMAIL = "lana@ikscharmsandtwosparkles.com";
 export const STUDIO_PHONE = "216-309-0331";
 export const STUDIO_PHONE_TEL = "+12163090331";
@@ -39,7 +40,9 @@ export const jsonLd = {
       telephone: STUDIO_PHONE_TEL,
       founder: {
         "@type": "Person",
-        description: "Black woman-led family studio",
+        name: STUDIO_CONTACT,
+        email: STUDIO_EMAIL,
+        jobTitle: "Contact",
       },
       ownershipFundingInfo: "Black woman-led family studio",
       sameAs: [KAYZ_URL, SPARKLE_URL, SOCIAL_INSTAGRAM, SOCIAL_FACEBOOK, SOCIAL_TIKTOK, SOCIAL_YOUTUBE],

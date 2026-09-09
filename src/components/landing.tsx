@@ -6,6 +6,7 @@ import {
   KAYZ_URL,
   SPARKLE_URL,
   jsonLd,
+  STUDIO_CONTACT,
   STUDIO_EMAIL,
   STUDIO_PHONE,
   STUDIO_PHONE_TEL,
@@ -697,16 +698,20 @@ function Contact() {
     <section id="contact" className="scroll-mt-20 border-y border-fg/10 bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <p className="text-xs font-medium uppercase tracking-widest text-accent">
-          Write Kay
+          Write Lana
         </p>
         <h2 className="mt-4 font-display text-3xl font-medium text-fg sm:text-4xl">
           Contact IK’s Charms & True Sparkle
         </h2>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted">
-          Questions, pickups, and custom ideas — she reads every note. Same
+          Questions, pickups, and custom ideas — Lana Moss reads every note. Same
           studio inbox for KayzCharmzz and True Sparkle.
         </p>
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-widest text-accent">Contact</p>
+            <p className="mt-3 min-h-11 text-fg">{STUDIO_CONTACT}</p>
+          </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-widest text-accent">Email</p>
             <a
@@ -742,7 +747,7 @@ function Contact() {
         <div className="mt-10">
           <Button asChild>
             <a href={`mailto:${STUDIO_EMAIL}`}>
-              Email Kay
+              Email Lana
               <ArrowUpRight />
             </a>
           </Button>
@@ -796,6 +801,7 @@ function Footer() {
           <p className="mt-4 text-sm text-muted">
             {STUDIO_LOCATION} · {STUDIO_EST}
           </p>
+          <p className="mt-3 text-sm text-fg">{STUDIO_CONTACT}</p>
           <a
             href={`mailto:${STUDIO_EMAIL}`}
             className="mt-2 block min-h-11 text-sm text-fg"

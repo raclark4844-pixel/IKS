@@ -5,6 +5,8 @@ Parent house landing page for **KayzCharmzz** and **True Sparkle** — a Black-o
 - KayzCharmzz handmade gifts: [kayzcharmzz.grok.me](https://kayzcharmzz.grok.me)
 - True Sparkle original diamond painting kits: [aurora-brook-zest-cosmic.grok.me](https://aurora-brook-zest-cosmic.grok.me)
 
+Contact: **Lana Moss** — [lana@ikscharmsandtwosparkles.com](mailto:lana@ikscharmsandtwosparkles.com)
+
 ## Stack
 
 TanStack Start, React, Tailwind CSS v4.
