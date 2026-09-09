@@ -2,6 +2,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { ArrowUpRight, ChevronDown, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/social-links";
+import { ContactForm } from "@/components/contact-form";
 import {
   KAYZ_URL,
   SPARKLE_URL,
@@ -695,63 +696,58 @@ function Faq() {
 
 function Contact() {
   return (
-    <section id="contact" className="scroll-mt-20 border-y border-fg/10 bg-surface">
-      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-        <p className="text-xs font-medium uppercase tracking-widest text-accent">
-          Write Lana
-        </p>
-        <h2 className="mt-4 font-display text-3xl font-medium text-fg sm:text-4xl">
-          Contact IK’s Charms & True Sparkle
-        </h2>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted">
-          Questions, pickups, and custom ideas — Lana Moss reads every note. Same
-          studio inbox for KayzCharmzz and True Sparkle.
-        </p>
-        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-widest text-accent">Contact</p>
-            <p className="mt-3 min-h-11 text-fg">{STUDIO_CONTACT}</p>
-          </div>
-          <div>
-            <p className="text-xs font-medium uppercase tracking-widest text-accent">Email</p>
-            <a
-              href={`mailto:${STUDIO_EMAIL}`}
-              className="mt-3 flex min-h-11 items-start gap-3 text-fg"
-            >
-              <Mail className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-              {STUDIO_EMAIL}
-            </a>
-          </div>
-          <div>
-            <p className="text-xs font-medium uppercase tracking-widest text-accent">Phone</p>
-            <a
-              href={`tel:${STUDIO_PHONE_TEL}`}
-              className="mt-3 flex min-h-11 items-start gap-3 text-fg"
-            >
-              <Phone className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-              {STUDIO_PHONE}
-            </a>
-          </div>
-          <div>
-            <p className="text-xs font-medium uppercase tracking-widest text-accent">Home</p>
-            <p className="mt-3 flex min-h-11 items-start gap-3 text-fg">
-              <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-              {STUDIO_LOCATION} · {STUDIO_EST}
-            </p>
-          </div>
-          <div>
-            <p className="text-xs font-medium uppercase tracking-widest text-accent">Follow</p>
-            <SocialLinks className="mt-2 -ml-1" />
+    <section id="contact" className="scroll-mt-20 border-y border-fg/10 bg-bg">
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:items-start">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-widest text-accent">
+            Write Lana
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-medium text-fg sm:text-4xl">
+            Contact IK’s Charms & True Sparkle
+          </h2>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
+            Questions, pickups, and custom ideas — Lana Moss reads every note. Same
+            studio inbox for KayzCharmzz and True Sparkle.
+          </p>
+          <div className="mt-10 space-y-6">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-widest text-accent">Contact</p>
+              <p className="mt-3 min-h-11 text-fg">{STUDIO_CONTACT}</p>
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-widest text-accent">Email</p>
+              <a
+                href={`mailto:${STUDIO_EMAIL}`}
+                className="mt-3 flex min-h-11 items-start gap-3 text-fg"
+              >
+                <Mail className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+                {STUDIO_EMAIL}
+              </a>
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-widest text-accent">Phone</p>
+              <a
+                href={`tel:${STUDIO_PHONE_TEL}`}
+                className="mt-3 flex min-h-11 items-start gap-3 text-fg"
+              >
+                <Phone className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+                {STUDIO_PHONE}
+              </a>
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-widest text-accent">Home</p>
+              <p className="mt-3 flex min-h-11 items-start gap-3 text-fg">
+                <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+                {STUDIO_LOCATION} · {STUDIO_EST}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-medium uppercase tracking-widest text-accent">Follow</p>
+              <SocialLinks className="mt-2 -ml-1" />
+            </div>
           </div>
         </div>
-        <div className="mt-10">
-          <Button asChild>
-            <a href={`mailto:${STUDIO_EMAIL}`}>
-              Email Lana
-              <ArrowUpRight />
-            </a>
-          </Button>
-        </div>
+        <ContactForm />
       </div>
     </section>
   );
