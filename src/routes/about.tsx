@@ -23,7 +23,7 @@ function AboutPage() {
       </h1>
       <p className="mt-6 text-lg leading-relaxed text-muted">
         {SITE_NAME} is a Black-owned, woman-led, family studio in Cleveland, Ohio.
-        The house opened in 2021 so Kay M could share the beautiful pieces already
+        The house opened in 2021 so Lana could share the beautiful pieces already
         covering her table — and so the family could build a second shop for
         original diamond painting kits that look like the people who paint them.
       </p>
@@ -43,7 +43,7 @@ function AboutPage() {
       <section className="mt-12">
         <h2 className="font-display text-3xl text-fg">The 2021 origin</h2>
         <p className="mt-4 text-base leading-relaxed text-muted">
-          Kay M started KayzCharmzz because she had so many finished gifts around
+          Lana started KayzCharmzz because she had so many finished gifts around
           that she needed to share them. Beautiful things, without breaking the
           bank. Custom stayed part of the shop from day one — tumblers in someone’s
           colors, charm mixes with a name, soy candles poured to order.

@@ -116,7 +116,7 @@ function BrandDoors() {
               Shop KayzCharmzz handmade gifts
             </h2>
             <p className="text-base leading-relaxed text-muted">
-              KayzCharmzz is Lana M’s Black-owned jewelry shop in Cleveland — a
+              KayzCharmzz is Lana’s Black-owned jewelry shop in Cleveland — a
               handmade boutique of charm bracelets and earrings, custom tumblers,
               glitter tumblers, soy candles, and beaded pens. Custom orders and
               classes with Lana keep the work personal. Beautiful gifts without
@@ -299,7 +299,7 @@ function Studio() {
             and a Black-owned business Cleveland, Ohio can point to with pride.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            KayzCharmzz began in 2021 when Lana M had so many beautiful items around
+            KayzCharmzz began in 2021 when Lana had so many beautiful items around
             that she needed to share them. True Sparkle grew beside it so painters
             could hang original work — not another aisle print — and turn your
             photos into a kit that is only yours. Two sister brands. One Cleveland
