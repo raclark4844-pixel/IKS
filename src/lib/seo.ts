@@ -13,9 +13,18 @@ export const STUDIO_CONTACT = "Lana Moss";
 export const STUDIO_EMAIL = "lana@ikscharmsandtwosparkles.com";
 export const STUDIO_PHONE = "216-309-0331";
 export const STUDIO_PHONE_TEL = "+12163090331";
-export const STUDIO_LOCATION = "Cleveland, Ohio";
+export const STUDIO_STREET = "35966 Detroit Rd";
+export const STUDIO_UNIT = "#1022";
+export const STUDIO_CITY = "Avon";
+export const STUDIO_STATE = "Ohio";
+export const STUDIO_STATE_CODE = "OH";
+export const STUDIO_ZIP = "44011";
+export const STUDIO_LOCATION = "Avon, Ohio";
+export const STUDIO_ADDRESS = "35966 Detroit Rd #1022, Avon, Ohio 44011";
+export const STUDIO_ADDRESS_LINES = ["35966 Detroit Rd", "#1022", "Avon, Ohio 44011"] as const;
+export const STUDIO_MAP_QUERY = "35966 Detroit Rd #1022, Avon, Ohio 44011";
 export const STUDIO_EST = "Est. 2021";
-export const NAP_LINE = `${SITE_NAME} · ${STUDIO_LOCATION} · ${STUDIO_EMAIL} · ${STUDIO_PHONE}`;
+export const NAP_LINE = `${SITE_NAME} · ${STUDIO_ADDRESS} · ${STUDIO_EMAIL} · ${STUDIO_PHONE}`;
 
 export const SOCIAL_INSTAGRAM = "https://www.instagram.com/kayzcharmzz";
 export const SOCIAL_FACEBOOK = "https://www.facebook.com/kayzcharmzz";
@@ -56,7 +65,7 @@ export function pageHead({
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "author", content: SITE_NAME },
       { name: "geo.region", content: "US-OH" },
-      { name: "geo.placename", content: "Cleveland" },
+      { name: "geo.placename", content: "Avon" },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:url", content: url },
@@ -89,8 +98,10 @@ export const jsonLd = {
       telephone: STUDIO_PHONE_TEL,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Cleveland",
+        streetAddress: "35966 Detroit Rd #1022",
+        addressLocality: "Avon",
         addressRegion: "OH",
+        postalCode: "44011",
         addressCountry: "US",
       },
       areaServed: { "@type": "Country", name: "United States" },
@@ -122,8 +133,10 @@ export const jsonLd = {
       parentOrganization: { "@id": `${SITE_ORIGIN}/#organization` },
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Cleveland",
+        streetAddress: "35966 Detroit Rd #1022",
+        addressLocality: "Avon",
         addressRegion: "OH",
+        postalCode: "44011",
         addressCountry: "US",
       },
     },
@@ -140,8 +153,10 @@ export const jsonLd = {
       parentOrganization: { "@id": `${SITE_ORIGIN}/#organization` },
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Cleveland",
+        streetAddress: "35966 Detroit Rd #1022",
+        addressLocality: "Avon",
         addressRegion: "OH",
+        postalCode: "44011",
         addressCountry: "US",
       },
     },

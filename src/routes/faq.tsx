@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
-import { KAYZ_URL, SPARKLE_URL, pageHead } from "@/lib/seo";
+import { KAYZ_URL, SPARKLE_URL, STUDIO_ADDRESS, STUDIO_EMAIL, STUDIO_PHONE, pageHead } from "@/lib/seo";
 
 const faqs = [
   {
@@ -28,6 +28,10 @@ const faqs = [
   {
     q: "Can I order a custom KayzCharmzz piece?",
     a: `Yes. Custom is part of the KayzCharmzz shop — tumblers, jewelry, candles, junk cases, and pens made to order in Cleveland. Describe the vision at ${KAYZ_URL}/custom. A photo helps if you have one. It is not required.`,
+  },
+  {
+    q: "Where is the studio?",
+    a: `Pickup is by appointment at ${STUDIO_ADDRESS}. Email Lana Moss at ${STUDIO_EMAIL} or call ${STUDIO_PHONE}. We also ship across the United States.`,
   },
 ];
 

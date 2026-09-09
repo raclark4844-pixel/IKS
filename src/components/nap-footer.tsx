@@ -1,4 +1,4 @@
-import { KAYZ_URL, NAP_LINE, SITE_NAME, SPARKLE_URL, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_PHONE_TEL } from "@/lib/seo";
+import { KAYZ_URL, NAP_LINE, SITE_NAME, SPARKLE_URL, STUDIO_ADDRESS_LINES, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_PHONE_TEL } from "@/lib/seo";
 
 export function NapStrip() {
   return (
@@ -23,7 +23,13 @@ export function SiteFooter() {
             {" · "}
             <a href={`tel:${STUDIO_PHONE_TEL}`}>{STUDIO_PHONE}</a>
           </p>
-          <p className="mt-2 text-sm text-muted">Cleveland, Ohio</p>
+          <p className="mt-2 text-sm text-muted">
+            {STUDIO_ADDRESS_LINES[0]}
+            <br />
+            {STUDIO_ADDRESS_LINES[1]}
+            <br />
+            {STUDIO_ADDRESS_LINES[2]}
+          </p>
         </div>
         <div>
           <p className="text-xs font-medium uppercase tracking-widest text-accent">This house</p>

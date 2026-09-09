@@ -10,7 +10,8 @@ import {
   STUDIO_EMAIL,
   STUDIO_PHONE,
   STUDIO_PHONE_TEL,
-  STUDIO_LOCATION,
+  STUDIO_ADDRESS_LINES,
+  STUDIO_ADDRESS,
   STUDIO_EST,
 } from "@/lib/seo";
 
@@ -622,6 +623,18 @@ const faqs = [
       </>
     ),
   },
+  {
+    q: "Where is the studio?",
+    a: (
+      <>
+        Pickup is by appointment at {STUDIO_ADDRESS}. Email Lana Moss or call{" "}
+        <a href={`tel:${STUDIO_PHONE_TEL}`} className="text-fg underline decoration-accent/50 underline-offset-4">
+          {STUDIO_PHONE}
+        </a>
+        . We also ship across the United States.
+      </>
+    ),
+  },
 ];
 
 function Faq() {
@@ -691,7 +704,14 @@ function Contact() {
               <p className="text-xs font-medium uppercase tracking-widest text-accent">Home</p>
               <p className="mt-3 flex min-h-11 items-start gap-3 text-fg">
                 <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-                {STUDIO_LOCATION} · {STUDIO_EST}
+                <span>
+                  {STUDIO_ADDRESS_LINES[0]}
+                  <br />
+                  {STUDIO_ADDRESS_LINES[1]}
+                  <br />
+                  {STUDIO_ADDRESS_LINES[2]}
+                  <span className="mt-1 block text-sm text-muted">{STUDIO_EST} · Pickup by appointment</span>
+                </span>
               </p>
             </div>
             <div>

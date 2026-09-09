@@ -9,7 +9,8 @@ import {
   STUDIO_CONTACT,
   STUDIO_EMAIL,
   STUDIO_EST,
-  STUDIO_LOCATION,
+  STUDIO_ADDRESS_LINES,
+  STUDIO_MAP_QUERY,
   STUDIO_PHONE,
   STUDIO_PHONE_TEL,
   pageHead,
@@ -19,9 +20,9 @@ import {
 export const Route = createFileRoute("/contact")({
   head: () =>
     pageHead({
-      title: "Contact IK’s Charms & True Sparkle | Cleveland",
+      title: "Contact IK’s Charms & True Sparkle | Avon, Ohio",
       description:
-        "Email Lana Moss, call the Cleveland studio, or send a note. Same inbox for KayzCharmzz handmade gifts and True Sparkle diamond painting kits.",
+        "Email Lana Moss, visit 35966 Detroit Rd #1022, Avon, Ohio 44011, or send a note. Same inbox for KayzCharmzz handmade gifts and True Sparkle diamond painting kits.",
       path: "/contact",
     }),
   component: ContactPage,
@@ -82,12 +83,19 @@ function ContactPage() {
           </a>
           <p className="flex min-h-11 items-start gap-3 text-fg">
             <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-            {STUDIO_LOCATION} · {STUDIO_EST}
+            <span>
+              {STUDIO_ADDRESS_LINES[0]}
+              <br />
+              {STUDIO_ADDRESS_LINES[1]}
+              <br />
+              {STUDIO_ADDRESS_LINES[2]}
+              <span className="mt-1 block text-sm text-muted">{STUDIO_EST} · Pickup by appointment</span>
+            </span>
           </p>
           <div className="overflow-hidden rounded-xl border border-fg/10">
             <iframe
-              title="Cleveland, Ohio map"
-              src="https://maps.google.com/maps?q=Cleveland%2C%20Ohio&z=11&output=embed"
+              title="Avon, Ohio studio map"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(STUDIO_MAP_QUERY)}&z=15&output=embed`}
               className="aspect-video w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
