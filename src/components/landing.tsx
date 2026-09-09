@@ -1,5 +1,5 @@
 import * as Accordion from "@radix-ui/react-accordion";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { KAYZ_URL, SPARKLE_URL, jsonLd, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_PHONE_TEL, STUDIO_LOCATION, STUDIO_EST, SOCIAL_INSTAGRAM, SOCIAL_FACEBOOK, SOCIAL_TIKTOK } from "@/lib/seo";
 
@@ -24,6 +24,7 @@ export function LandingPage() {
         <KayzCustom />
         <SparkleKits />
         <Faq />
+        <Contact />
         <SeoNote />
       </main>
       <Footer />
@@ -677,6 +678,78 @@ function Faq() {
           </Accordion.Item>
         ))}
       </Accordion.Root>
+    </section>
+  );
+}
+
+function Contact() {
+  return (
+    <section id="contact" className="scroll-mt-20 border-y border-fg/10 bg-surface">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <p className="text-xs font-medium uppercase tracking-widest text-accent">
+          Write Kay
+        </p>
+        <h2 className="mt-4 font-display text-3xl font-medium text-fg sm:text-4xl">
+          Contact IK’s Charms & True Sparkle
+        </h2>
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted">
+          Questions, pickups, and custom ideas — she reads every note. Same
+          studio inbox for KayzCharmzz and True Sparkle.
+        </p>
+        <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-widest text-accent">Email</p>
+            <a
+              href={`mailto:${STUDIO_EMAIL}`}
+              className="mt-3 flex min-h-11 items-start gap-3 text-fg"
+            >
+              <Mail className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+              {STUDIO_EMAIL}
+            </a>
+          </div>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-widest text-accent">Phone</p>
+            <a
+              href={`tel:${STUDIO_PHONE_TEL}`}
+              className="mt-3 flex min-h-11 items-start gap-3 text-fg"
+            >
+              <Phone className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+              {STUDIO_PHONE}
+            </a>
+          </div>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-widest text-accent">Home</p>
+            <p className="mt-3 flex min-h-11 items-start gap-3 text-fg">
+              <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+              {STUDIO_LOCATION} · {STUDIO_EST}
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-widest text-accent">Follow</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              <a href={SOCIAL_INSTAGRAM} rel="noopener" target="_blank" className="text-fg">
+                Instagram
+              </a>
+              {" & "}
+              <a href={SOCIAL_FACEBOOK} rel="noopener" target="_blank" className="text-fg">
+                Facebook
+              </a>{" "}
+              @kayzcharmzz ·{" "}
+              <a href={SOCIAL_TIKTOK} rel="noopener" target="_blank" className="text-fg">
+                TikTok @mamk40
+              </a>
+            </p>
+          </div>
+        </div>
+        <div className="mt-10">
+          <Button asChild>
+            <a href={`mailto:${STUDIO_EMAIL}`}>
+              Email Kay
+              <ArrowUpRight />
+            </a>
+          </Button>
+        </div>
+      </div>
     </section>
   );
 }

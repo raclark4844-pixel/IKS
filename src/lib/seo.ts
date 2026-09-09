@@ -51,6 +51,8 @@ export const jsonLd = {
       name: "KayzCharmzz",
       alternateName: ["Kayz Charmzz", "Kayz charms Cleveland"],
       url: KAYZ_URL,
+      email: STUDIO_EMAIL,
+      telephone: STUDIO_PHONE_TEL,
       description:
         "Handmade jewelry, charms, tumblers, candles, custom gifts, and classes from a Black-owned, woman-led boutique in Cleveland, Ohio.",
       address: {
@@ -67,6 +69,8 @@ export const jsonLd = {
       "@id": "#truesparkle",
       name: "True Sparkle",
       url: SPARKLE_URL,
+      email: STUDIO_EMAIL,
+      telephone: STUDIO_PHONE_TEL,
       description:
         "Original diamond painting kits — glam, wildlife, heroes, holidays, and beginner-friendly art with round or square drills. Turn your photos into a kit. Woman-owned diamond painting studio in Cleveland, Ohio.",
       slogan: "Create it. Sparkle it. Make it yours.",

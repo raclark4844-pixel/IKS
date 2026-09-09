@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CircleHelp, Gem, House, Landmark, Sparkles } from "lucide-react";
+import { CircleHelp, Gem, House, Landmark, Mail, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const tabs = [
@@ -8,6 +8,7 @@ const tabs = [
   { href: "/#true-sparkle", match: ["#true-sparkle"], label: "Sparkle", ariaLabel: "True Sparkle" },
   { href: "/#studio", match: ["#studio"], label: "Studio", ariaLabel: "Studio" },
   { href: "/#faq", match: ["#faq"], label: "FAQ", ariaLabel: "FAQ" },
+  { href: "/#contact", match: ["#contact"], label: "Contact", ariaLabel: "Contact" },
 ] as const;
 
 const icons = {
@@ -16,6 +17,7 @@ const icons = {
   Sparkle: Gem,
   Studio: Landmark,
   FAQ: CircleHelp,
+  Contact: Mail,
 } as const;
 
 function usePageHash() {
@@ -56,7 +58,7 @@ export function BottomNav() {
       aria-label="Primary"
       className="bottom-nav fixed inset-x-0 bottom-0 z-40 border-t border-fg/10 bg-bg"
     >
-      <ul className="mx-auto grid h-14 max-w-6xl grid-cols-5">
+      <ul className="mx-auto grid h-14 max-w-6xl grid-cols-6">
         {tabs.map((tab) => {
           const active = (tab.match as readonly string[]).includes(hash);
           const Icon = icons[tab.label];
