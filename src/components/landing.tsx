@@ -1,7 +1,17 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import { ArrowUpRight, ChevronDown, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { KAYZ_URL, SPARKLE_URL, jsonLd, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_PHONE_TEL, STUDIO_LOCATION, STUDIO_EST, SOCIAL_INSTAGRAM, SOCIAL_FACEBOOK, SOCIAL_TIKTOK } from "@/lib/seo";
+import { SocialLinks } from "@/components/social-links";
+import {
+  KAYZ_URL,
+  SPARKLE_URL,
+  jsonLd,
+  STUDIO_EMAIL,
+  STUDIO_PHONE,
+  STUDIO_PHONE_TEL,
+  STUDIO_LOCATION,
+  STUDIO_EST,
+} from "@/lib/seo";
 
 export function LandingPage() {
   return (
@@ -726,19 +736,7 @@ function Contact() {
           </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-widest text-accent">Follow</p>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              <a href={SOCIAL_INSTAGRAM} rel="noopener" target="_blank" className="text-fg">
-                Instagram
-              </a>
-              {" & "}
-              <a href={SOCIAL_FACEBOOK} rel="noopener" target="_blank" className="text-fg">
-                Facebook
-              </a>{" "}
-              @kayzcharmzz ·{" "}
-              <a href={SOCIAL_TIKTOK} rel="noopener" target="_blank" className="text-fg">
-                TikTok @mamk40
-              </a>
-            </p>
+            <SocialLinks className="mt-2 -ml-1" />
           </div>
         </div>
         <div className="mt-10">
@@ -810,19 +808,7 @@ function Footer() {
           >
             {STUDIO_PHONE}
           </a>
-          <p className="mt-2 text-sm text-muted">
-            <a href={SOCIAL_INSTAGRAM} rel="noopener" target="_blank" className="text-fg">
-              Instagram
-            </a>
-            {" & "}
-            <a href={SOCIAL_FACEBOOK} rel="noopener" target="_blank" className="text-fg">
-              Facebook
-            </a>{" "}
-            @kayzcharmzz ·{" "}
-            <a href={SOCIAL_TIKTOK} rel="noopener" target="_blank" className="text-fg">
-              TikTok @mamk40
-            </a>
-          </p>
+          <SocialLinks className="mt-2 -ml-1" />
         </div>
         <div>
           <p className="text-xs font-medium uppercase tracking-widest text-accent">KayzCharmzz</p>

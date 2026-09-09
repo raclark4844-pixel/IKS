@@ -15,6 +15,7 @@ export const STUDIO_EST = "Est. 2021";
 export const SOCIAL_INSTAGRAM = "https://www.instagram.com/kayzcharmzz";
 export const SOCIAL_FACEBOOK = "https://www.facebook.com/kayzcharmzz";
 export const SOCIAL_TIKTOK = "https://www.tiktok.com/@mamk40";
+export const SOCIAL_YOUTUBE = "https://www.youtube.com/@kaythecreator-zc7dl";
 
 export const jsonLd = {
   "@context": "https://schema.org",
@@ -41,7 +42,7 @@ export const jsonLd = {
         description: "Black woman-led family studio",
       },
       ownershipFundingInfo: "Black woman-led family studio",
-      sameAs: [KAYZ_URL, SPARKLE_URL, SOCIAL_INSTAGRAM, SOCIAL_FACEBOOK, SOCIAL_TIKTOK],
+      sameAs: [KAYZ_URL, SPARKLE_URL, SOCIAL_INSTAGRAM, SOCIAL_FACEBOOK, SOCIAL_TIKTOK, SOCIAL_YOUTUBE],
       subOrganization: [{ "@id": "#kayzcharmzz" }, { "@id": "#truesparkle" }],
       brand: [{ "@id": "#kayzcharmzz" }, { "@id": "#truesparkle" }],
     },
