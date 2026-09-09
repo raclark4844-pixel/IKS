@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { STUDIO_EMAIL } from "@/lib/seo";
+import { STUDIO_EMAIL, trackEvent } from "@/lib/seo";
 
 const fieldClass =
   "mt-2 min-h-12 w-full rounded-full border border-fg/15 bg-bg px-5 text-sm text-fg outline-none placeholder:text-muted/40 focus:border-accent";
@@ -43,6 +43,7 @@ export function ContactForm() {
       .join("\n");
 
     window.location.href = `mailto:${STUDIO_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    trackEvent("generate_lead", { form: "contact" });
     setSent(true);
   }
 

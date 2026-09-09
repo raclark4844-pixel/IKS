@@ -6,7 +6,6 @@ import { ContactForm } from "@/components/contact-form";
 import {
   KAYZ_URL,
   SPARKLE_URL,
-  jsonLd,
   STUDIO_CONTACT,
   STUDIO_EMAIL,
   STUDIO_PHONE,
@@ -18,10 +17,6 @@ import {
 export function LandingPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-fg"
@@ -39,7 +34,6 @@ export function LandingPage() {
         <Contact />
         <SeoNote />
       </main>
-      <Footer />
     </>
   );
 }
@@ -177,7 +171,7 @@ function BrandDoors() {
                 </a>
               </Button>
               <Button asChild variant="outline">
-                <a href={`${SPARKLE_URL}/#shop`} rel="noopener" target="_blank">
+                <a href={`${SPARKLE_URL}/custom`} rel="noopener" target="_blank">
                   Turn your photos into a kit
                   <ArrowUpRight />
                 </a>
@@ -195,55 +189,25 @@ const kayzShop = [
     href: "/shop/betty-boop-tumbler",
     file: "kayz-betty-boop.jpg",
     title: "Betty Boop 20oz Tumbler",
-    alt: "KayzCharmzz Betty Boop 20oz hot and cold tumbler Cleveland",
-  },
-  {
-    href: "/shop/snow-globe-tumbler",
-    file: "kayz-snow-globe.jpg",
-    title: "Snow Globe Tumbler",
-    alt: "KayzCharmzz snow globe tumbler handmade gift Cleveland",
+    alt: "Betty Boop 20oz insulated tumbler handmade by KayzCharmzz",
   },
   {
     href: "/shop/junk-case-tumbler-set",
     file: "kayz-junk-set.jpg",
     title: "Junk Phone Case and Tumbler Set",
-    alt: "KayzCharmzz junk phone case and matching tumbler set Cleveland",
-  },
-  {
-    href: "/shop/pink-junk-pixel-case",
-    file: "kayz-pink-case.jpg",
-    title: "Pink Freestyle Bling Case",
-    alt: "KayzCharmzz pink freestyle bling junk Pixel 10 case Cleveland",
-  },
-  {
-    href: "/shop/margarita-candle-set",
-    file: "kayz-margarita.jpg",
-    title: "Frozen Margarita Candle Set",
-    alt: "KayzCharmzz blueberry and watermelon frozen margarita soy candle set Cleveland",
-  },
-  {
-    href: "/shop/french-vanilla-candle",
-    file: "kayz-vanilla.jpg",
-    title: "French Vanilla Coffee Soy Candle",
-    alt: "KayzCharmzz French vanilla coffee soy candle Cleveland",
+    alt: "Junk phone case and matching tumbler set handmade by KayzCharmzz",
   },
   {
     href: "/shop/banana-pudding-candle",
     file: "kayz-banana.jpg",
     title: "Banana Pudding Whipped Candle",
-    alt: "KayzCharmzz banana pudding whipped soy candle Cleveland",
-  },
-  {
-    href: "/shop/floral-pens-set",
-    file: "kayz-floral-pens.jpg",
-    title: "Floral Beaded Pens + Lip Gloss",
-    alt: "KayzCharmzz floral beaded pens and lip gloss set Cleveland",
+    alt: "Banana pudding whipped soy candle handmade by KayzCharmzz",
   },
   {
     href: "/shop/heart-drop-earrings",
     file: "kayz-heart-earrings.jpg",
     title: "I Love You Heart Drop Earrings",
-    alt: "KayzCharmzz I Love You heart drop earrings handmade jewelry Cleveland",
+    alt: "I Love You heart drop earrings handmade by KayzCharmzz",
   },
 ] as const;
 
@@ -254,9 +218,9 @@ function KayzShop() {
         <p className="text-xs font-medium uppercase tracking-widest text-accent">
           Beautiful gifts, without breaking the bank
         </p>
-        <h3 className="mt-4 max-w-3xl font-display text-3xl font-medium text-fg sm:text-4xl">
-          From the KayzCharmzz shop
-        </h3>
+        <h2 className="mt-4 max-w-3xl font-display text-3xl font-medium text-fg sm:text-4xl">
+          A few pieces from KayzCharmzz
+        </h2>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted">
           Tumblers, junk cases, soy candles, beaded pens, and handmade jewelry —
           pieces Kay actually has on the table. Shop KayzCharmzz for glitter
@@ -426,76 +390,28 @@ function KayzCustom() {
 
 const sparkleKits = [
   {
-    slug: "barbie",
+    slug: "sparkle-glam-closet",
     file: "sparkle-barbie.jpg",
     title: "Sparkle Glam Closet",
-    alt: "True Sparkle Sparkle Glam Closet diamond painting kit Cleveland",
+    alt: "Sparkle Glam Closet original diamond painting kit by True Sparkle",
   },
   {
-    slug: "gala",
-    file: "sparkle-gala.jpg",
-    title: "Diamond Gala Romance",
-    alt: "True Sparkle Diamond Gala Romance diamond painting kit Cleveland",
-  },
-  {
-    slug: "queen",
-    file: "sparkle-queen.jpg",
-    title: "Jewel-Toned Mosaic Queen",
-    alt: "True Sparkle Jewel-Toned Mosaic Queen diamond painting kit Cleveland",
-  },
-  {
-    slug: "fairy",
-    file: "sparkle-fairy.jpg",
-    title: "Enchanted Fairy Portrait",
-    alt: "True Sparkle Enchanted Fairy Portrait diamond painting kit Cleveland",
-  },
-  {
-    slug: "lioness",
+    slug: "lioness-family-at-sunset-safari",
     file: "sparkle-lioness.jpg",
     title: "Lioness Family at Sunset",
-    alt: "True Sparkle Lioness Family at Sunset Safari diamond painting kit",
+    alt: "Lioness Family at Sunset Safari original diamond painting kit by True Sparkle",
   },
   {
-    slug: "polar",
-    file: "sparkle-polar.jpg",
-    title: "Festive Winter Departure",
-    alt: "True Sparkle Festive Winter Departure holiday diamond painting kit",
-  },
-  {
-    slug: "halloween",
-    file: "sparkle-halloween.jpg",
-    title: "Enchanted Halloween Masquerade",
-    alt: "True Sparkle Enchanted Halloween Masquerade Fairy diamond painting kit",
-  },
-  {
-    slug: "candy",
+    slug: "sparkling-sweet-treats",
     file: "sparkle-candy.jpg",
     title: "Sparkling Sweet Treats",
-    alt: "True Sparkle Sparkling Sweet Treats Candy Land diamond painting kit",
+    alt: "Sparkling Sweet Treats original diamond painting kit by True Sparkle",
   },
   {
-    slug: "firefighter",
+    slug: "firefighter-heroes",
     file: "sparkle-firefighter.jpg",
     title: "Firefighter Heroes",
-    alt: "True Sparkle Firefighter Heroes diamond painting kit Cleveland",
-  },
-  {
-    slug: "steelers",
-    file: "sparkle-steelers.jpg",
-    title: "Glamorous Game Day Lounge",
-    alt: "True Sparkle Glamorous Game Day Lounge diamond painting kit",
-  },
-  {
-    slug: "puppy",
-    file: "sparkle-puppy.jpg",
-    title: "Puppy Playground",
-    alt: "True Sparkle Puppy Playground diamond painting kit Cleveland",
-  },
-  {
-    slug: "waves",
-    file: "sparkle-waves.jpg",
-    title: "Riding Waves in Paradise",
-    alt: "True Sparkle Riding Waves in Paradise diamond painting kit",
+    alt: "Firefighter Heroes original diamond painting kit by True Sparkle",
   },
 ] as const;
 
@@ -530,7 +446,7 @@ function SparkleKits() {
           {sparkleKits.map((kit) => (
             <a
               key={kit.slug}
-              href={`${SPARKLE_URL}/?kit=${kit.slug}`}
+              href={`${SPARKLE_URL}/kits/${kit.slug}`}
               rel="noopener"
               target="_blank"
               className="overflow-hidden rounded-lg bg-bg shadow-border transition-shadow duration-150 hover:shadow-border-hover"
@@ -568,7 +484,7 @@ function SparkleKits() {
             </a>
           </Button>
           <Button asChild variant="outline">
-            <a href={`${SPARKLE_URL}/#shop`} rel="noopener" target="_blank">
+            <a href={`${SPARKLE_URL}/custom`} rel="noopener" target="_blank">
               Turn your photos into a kit
               <ArrowUpRight />
             </a>
@@ -605,7 +521,7 @@ const faqs = [
         tumblers, glitter tumblers, soy candles, beaded pens, and custom gifts from
         a woman-led, family-owned boutique in Cleveland. Shop KayzCharmzz at{" "}
         <a href={KAYZ_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
-          kayzcharmzz.grok.me
+          kayzcharmzz.com
         </a>
         . Sister brand True Sparkle lives at{" "}
         <a href={SPARKLE_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
@@ -624,7 +540,7 @@ const faqs = [
         woman-led, family-owned studio in Cleveland. True Sparkle will also turn
         your photos into a kit. Shop True Sparkle at{" "}
         <a href={SPARKLE_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
-          aurora-brook-zest-cosmic.grok.me
+          truesparkles.com
         </a>
         . Handmade gifts from KayzCharmzz are at{" "}
         <a href={KAYZ_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
@@ -781,69 +697,5 @@ function SeoNote() {
         </p>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-fg/10 bg-bg">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-3">
-        <div>
-          <p className="font-display text-xl text-fg">IK’s Charms & True Sparkle</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">
-            Black-owned, woman-led, family-owned studio in Cleveland, Ohio. Parent
-            house of KayzCharmzz and True Sparkle.
-          </p>
-          <p className="mt-4 text-sm text-muted">
-            {STUDIO_LOCATION} · {STUDIO_EST}
-          </p>
-          <p className="mt-3 text-sm text-fg">{STUDIO_CONTACT}</p>
-          <a
-            href={`mailto:${STUDIO_EMAIL}`}
-            className="mt-2 block min-h-11 text-sm text-fg"
-          >
-            {STUDIO_EMAIL}
-          </a>
-          <a
-            href={`tel:${STUDIO_PHONE_TEL}`}
-            className="block min-h-11 text-sm text-fg"
-          >
-            {STUDIO_PHONE}
-          </a>
-          <SocialLinks className="mt-2 -ml-1" />
-        </div>
-        <div>
-          <p className="text-xs font-medium uppercase tracking-widest text-accent">KayzCharmzz</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">
-            Handmade jewelry, custom tumblers, soy candles, beaded pens, and classes
-            with Kay — beautiful gifts without breaking the bank, from a Black-owned
-            jewelry shop in Cleveland.
-          </p>
-          <a href={KAYZ_URL} rel="noopener" target="_blank" className="mt-3 inline-flex min-h-11 items-center text-sm text-fg">
-            Shop KayzCharmzz handmade gifts
-            <ArrowUpRight className="ml-1 size-4" />
-          </a>
-        </div>
-        <div>
-          <p className="text-xs font-medium uppercase tracking-widest text-accent">True Sparkle</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">
-            Original diamond painting kits you want to hang — glam, wildlife, heroes,
-            holidays, beginner-friendly art. Round or square drills. Turn your photos
-            into a kit. Create it. Sparkle it. Make it yours.
-          </p>
-          <a href={SPARKLE_URL} rel="noopener" target="_blank" className="mt-3 inline-flex min-h-11 items-center text-sm text-fg">
-            Shop True Sparkle diamond painting kits
-            <ArrowUpRight className="ml-1 size-4" />
-          </a>
-          <a href={`${SPARKLE_URL}/contact`} rel="noopener" target="_blank" className="inline-flex min-h-11 items-center text-sm text-fg">
-            Turn your photos into a kit
-            <ArrowUpRight className="ml-1 size-4" />
-          </a>
-        </div>
-      </div>
-      <p className="border-t border-fg/10 py-6 text-center text-xs text-muted">
-        IK’s Charms & True Sparkle · KayzCharmzz · True Sparkle · Cleveland, Ohio
-      </p>
-    </footer>
   );
 }
