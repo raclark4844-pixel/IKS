@@ -116,10 +116,10 @@ function BrandDoors() {
               Shop KayzCharmzz handmade gifts
             </h2>
             <p className="text-base leading-relaxed text-muted">
-              KayzCharmzz is Kay M’s Black-owned jewelry shop in Cleveland — a
+              KayzCharmzz is Lana M’s Black-owned jewelry shop in Cleveland — a
               handmade boutique of charm bracelets and earrings, custom tumblers,
               glitter tumblers, soy candles, and beaded pens. Custom orders and
-              classes with Kay keep the work personal. Beautiful gifts without
+              classes with Lana keep the work personal. Beautiful gifts without
               breaking the bank, from a woman-owned gift shop in Cleveland, Ohio.
             </p>
             <div className="mt-auto pt-2">
@@ -223,7 +223,7 @@ function KayzShop() {
         </h2>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted">
           Tumblers, junk cases, soy candles, beaded pens, and handmade jewelry —
-          pieces Kay actually has on the table. Shop KayzCharmzz for glitter
+          pieces Lana actually has on the table. Shop KayzCharmzz for glitter
           tumblers, charm bracelets and earrings, and candles you can smell from
           the listing. Custom stays open; the shelf is ready now.
         </p>
@@ -299,7 +299,7 @@ function Studio() {
             and a Black-owned business Cleveland, Ohio can point to with pride.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            KayzCharmzz began in 2021 when Kay M had so many beautiful items around
+            KayzCharmzz began in 2021 when Lana M had so many beautiful items around
             that she needed to share them. True Sparkle grew beside it so painters
             could hang original work — not another aisle print — and turn your
             photos into a kit that is only yours. Two sister brands. One Cleveland
@@ -323,14 +323,14 @@ function KayzCustom() {
             KayzCharmzz custom orders and classes
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted">
-            Tell Kay the vision. She will bring it to life — a glitter tumbler,
+            Tell Lana the vision. She will bring it to life — a glitter tumbler,
             matching charm bracelets and earrings Cleveland can wear the same day, a
             soy candles Cleveland favorite in French vanilla coffee.{" "}
             <a href={KAYZ_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
               custom tumblers and jewelry
             </a>{" "}
             sit beside beaded pens and ready-to-gift sets. Custom orders Cleveland
-            families send for birthdays live next to the shelf. Classes with Kay
+            families send for birthdays live next to the shelf. Classes with Lana
             cover jewelry online by the hour, and candles on request.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted">
@@ -684,7 +684,7 @@ function SeoNote() {
           </a>{" "}
           is the handmade boutique: jewelry, charm bracelets and earrings, custom
           tumblers and jewelry, glitter tumblers, soy candles, beaded pens, custom
-          orders, and classes with Kay — beautiful gifts without breaking the bank.{" "}
+          orders, and classes with Lana — beautiful gifts without breaking the bank.{" "}
           <a href={SPARKLE_URL} rel="noopener" target="_blank" className="underline decoration-accent/50 underline-offset-4">
             True Sparkle
           </a>{" "}
