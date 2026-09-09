@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "What does KayzCharmzz sell?",
-    a: `KayzCharmzz sells handmade jewelry, tumblers, soy candles, junk phone cases, beaded pens, and custom gifts. Shop handmade gifts at ${KAYZ_URL}. Original diamond painting kits live at True Sparkle.`,
+    a: `KayzCharmzz sells handmade jewelry, tumblers, soy candles, junk phone cases, beaded pens, and custom gifts. Custom orders welcome — a photo is optional. Shop handmade gifts at ${KAYZ_URL}. Original diamond painting kits live at True Sparkle.`,
   },
   {
     q: "What does True Sparkle sell?",
@@ -25,6 +25,10 @@ const faqs = [
     q: "Can I turn a photo into a diamond painting kit?",
     a: `Yes. Send a portrait, pet, wedding, or game-day photo through ${SPARKLE_URL}/custom. True Sparkle charts a layout, size, and drill type for you.`,
   },
+  {
+    q: "Can I order a custom KayzCharmzz piece?",
+    a: `Yes. Custom is part of the KayzCharmzz shop — tumblers, jewelry, candles, junk cases, and pens made to order in Cleveland. Describe the vision at ${KAYZ_URL}/custom. A photo helps if you have one. It is not required.`,
+  },
 ];
 
 export const Route = createFileRoute("/faq")({
@@ -32,7 +36,7 @@ export const Route = createFileRoute("/faq")({
     pageHead({
       title: "FAQ | IK’s Charms & True Sparkle Cleveland",
       description:
-        "Who we are, what each sister shop sells, and how to order a custom photo diamond painting kit from the Cleveland studio.",
+        "Who we are, what each sister shop sells, how to order a custom KayzCharmzz piece, and how to order a custom photo diamond painting kit from the Cleveland studio.",
       path: "/faq",
     }),
   component: FaqPage,

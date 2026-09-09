@@ -119,13 +119,20 @@ function BrandDoors() {
               KayzCharmzz is Lana’s Black-owned jewelry shop in Cleveland — a
               handmade boutique of charm bracelets and earrings, custom tumblers,
               glitter tumblers, soy candles, and beaded pens. Custom orders and
-              classes with Lana keep the work personal. Beautiful gifts without
+              classes with Lana keep the work personal — describe the piece, and
+              add a photo only if you have one. Beautiful gifts without
               breaking the bank, from a woman-owned gift shop in Cleveland, Ohio.
             </p>
-            <div className="mt-auto pt-2">
+            <div className="mt-auto flex flex-col gap-3 pt-2">
               <Button asChild>
                 <a href={KAYZ_URL} rel="noopener" target="_blank">
                   Shop KayzCharmzz handmade gifts
+                  <ArrowUpRight />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={`${KAYZ_URL}/custom`} rel="noopener" target="_blank">
+                  Custom order at KayzCharmzz
                   <ArrowUpRight />
                 </a>
               </Button>
@@ -225,7 +232,8 @@ function KayzShop() {
           Tumblers, junk cases, soy candles, beaded pens, and handmade jewelry —
           pieces Lana actually has on the table. Shop KayzCharmzz for glitter
           tumblers, charm bracelets and earrings, and candles you can smell from
-          the listing. Custom stays open; the shelf is ready now.
+          the listing. Custom stays open — send a photo if you have one, or just
+          describe the vision. The shelf is ready now.
         </p>
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {kayzShop.map((item) => (
@@ -326,12 +334,15 @@ function KayzCustom() {
             Tell Lana the vision. She will bring it to life — a glitter tumbler,
             matching charm bracelets and earrings Cleveland can wear the same day, a
             soy candles Cleveland favorite in French vanilla coffee.{" "}
-            <a href={KAYZ_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
+            <a href={`${KAYZ_URL}/custom`} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
               custom tumblers and jewelry
             </a>{" "}
-            sit beside beaded pens and ready-to-gift sets. Custom orders Cleveland
-            families send for birthdays live next to the shelf. Classes with Lana
-            cover jewelry online by the hour, and candles on request.
+            sit beside beaded pens and ready-to-gift sets. Describe the piece on
+            the KayzCharmzz custom form. A photo of a mockup, a screenshot, or a
+            shade you like helps if you have one — it is optional, not required.
+            Custom orders Cleveland families send for birthdays live next to the
+            shelf. Classes with Lana cover jewelry online by the hour, and candles
+            on request.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted">
             The{" "}
@@ -342,10 +353,16 @@ function KayzCustom() {
             Cleveland, a Black-owned jewelry shop Cleveland, a woman-owned gift shop
             Cleveland Ohio — beautiful gifts without breaking the bank.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button asChild>
+              <a href={`${KAYZ_URL}/custom`} rel="noopener" target="_blank">
+                Start a KayzCharmzz custom order
+                <ArrowUpRight />
+              </a>
+            </Button>
             <Button asChild variant="outline">
-              <a href={KAYZ_URL} rel="noopener" target="_blank">
-                Visit KayzCharmzz
+              <a href={`${KAYZ_URL}/shop`} rel="noopener" target="_blank">
+                Shop KayzCharmzz
                 <ArrowUpRight />
               </a>
             </Button>
@@ -523,7 +540,8 @@ const faqs = [
         <a href={KAYZ_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
           kayzcharmzz.com
         </a>
-        . Sister brand True Sparkle lives at{" "}
+        . Custom tumblers, jewelry, candles, and junk cases are made to order
+        there — a photo is optional. Sister brand True Sparkle lives at{" "}
         <a href={SPARKLE_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
           the True Sparkle catalog
         </a>
@@ -574,12 +592,31 @@ const faqs = [
       <>
         Yes. True Sparkle will turn your photos into a diamond painting kit from the
         woman-led, family-owned studio in Cleveland, Ohio. Send a photo through{" "}
-        <a href={`${SPARKLE_URL}/contact`} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
-          True Sparkle
+        <a href={`${SPARKLE_URL}/custom`} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
+          True Sparkle custom kits
         </a>
         . Handmade gifts from KayzCharmzz are at{" "}
         <a href={KAYZ_URL} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
           the KayzCharmzz shop
+        </a>
+        .
+      </>
+    ),
+  },
+  {
+    q: "Can I order a custom KayzCharmzz piece?",
+    a: (
+      <>
+        Yes. Custom is part of the KayzCharmzz shop — tumblers, charm jewelry,
+        soy candles, junk phone cases, and pens made to order in Cleveland. Tell
+        Lana the vision on{" "}
+        <a href={`${KAYZ_URL}/custom`} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
+          the KayzCharmzz custom form
+        </a>
+        . A photo of a mockup or a shade you like helps if you have one. It is
+        not required. For a photo diamond painting kit, use{" "}
+        <a href={`${SPARKLE_URL}/custom`} rel="noopener" className="text-fg underline decoration-accent/50 underline-offset-4">
+          True Sparkle custom kits
         </a>
         .
       </>
@@ -684,7 +721,7 @@ function SeoNote() {
           </a>{" "}
           is the handmade boutique: jewelry, charm bracelets and earrings, custom
           tumblers and jewelry, glitter tumblers, soy candles, beaded pens, custom
-          orders, and classes with Lana — beautiful gifts without breaking the bank.{" "}
+          orders (a photo is optional), and classes with Lana — beautiful gifts without breaking the bank.{" "}
           <a href={SPARKLE_URL} rel="noopener" target="_blank" className="underline decoration-accent/50 underline-offset-4">
             True Sparkle
           </a>{" "}

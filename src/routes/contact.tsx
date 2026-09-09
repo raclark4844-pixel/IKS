@@ -53,6 +53,14 @@ function ContactPage() {
           <a href={SPARKLE_URL} className="text-fg underline decoration-accent/50 underline-offset-4">
             True Sparkle original diamond painting kits
           </a>
+          . For a custom tumbler or charm mix, use{" "}
+          <a href={`${KAYZ_URL}/custom`} className="text-fg underline decoration-accent/50 underline-offset-4">
+            the KayzCharmzz custom form
+          </a>
+          — a photo is optional. For a photo diamond painting kit, use{" "}
+          <a href={`${SPARKLE_URL}/custom`} className="text-fg underline decoration-accent/50 underline-offset-4">
+            True Sparkle custom kits
+          </a>
           .
         </p>
         <div className="mt-10 space-y-6">

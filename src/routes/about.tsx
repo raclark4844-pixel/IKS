@@ -46,7 +46,12 @@ function AboutPage() {
           Lana started KayzCharmzz because she had so many finished gifts around
           that she needed to share them. Beautiful things, without breaking the
           bank. Custom stayed part of the shop from day one — tumblers in someone’s
-          colors, charm mixes with a name, soy candles poured to order.
+          colors, charm mixes with a name, soy candles poured to order. Describe
+          the piece on{" "}
+          <a href={`${KAYZ_URL}/custom`} className="text-fg underline decoration-accent/50 underline-offset-4">
+            the KayzCharmzz custom form
+          </a>
+          . A photo helps if you have one. It is not required.
         </p>
         <p className="mt-4 text-base leading-relaxed text-muted">
           True Sparkle grew beside it. The family wanted diamond painting kits that
