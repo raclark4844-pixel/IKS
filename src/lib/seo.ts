@@ -7,6 +7,15 @@ export const SITE_DESCRIPTION =
 export const KAYZ_URL = "https://kayzcharmzz.grok.me";
 export const SPARKLE_URL = "https://aurora-brook-zest-cosmic.grok.me";
 
+export const STUDIO_EMAIL = "lana@ikscharmsandtwosparkles.com";
+export const STUDIO_PHONE = "216-309-0331";
+export const STUDIO_PHONE_TEL = "+12163090331";
+export const STUDIO_LOCATION = "Cleveland, Ohio";
+export const STUDIO_EST = "Est. 2021";
+export const SOCIAL_INSTAGRAM = "https://www.instagram.com/kayzcharmzz";
+export const SOCIAL_FACEBOOK = "https://www.facebook.com/kayzcharmzz";
+export const SOCIAL_TIKTOK = "https://www.tiktok.com/@mamk40";
+
 export const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -25,12 +34,14 @@ export const jsonLd = {
         addressCountry: "US",
       },
       areaServed: { "@type": "Country", name: "United States" },
+      email: STUDIO_EMAIL,
+      telephone: STUDIO_PHONE_TEL,
       founder: {
         "@type": "Person",
         description: "Black woman-led family studio",
       },
       ownershipFundingInfo: "Black woman-led family studio",
-      sameAs: [KAYZ_URL, SPARKLE_URL],
+      sameAs: [KAYZ_URL, SPARKLE_URL, SOCIAL_INSTAGRAM, SOCIAL_FACEBOOK, SOCIAL_TIKTOK],
       subOrganization: [{ "@id": "#kayzcharmzz" }, { "@id": "#truesparkle" }],
       brand: [{ "@id": "#kayzcharmzz" }, { "@id": "#truesparkle" }],
     },

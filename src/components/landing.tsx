@@ -1,7 +1,7 @@
 import * as Accordion from "@radix-ui/react-accordion";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { KAYZ_URL, SPARKLE_URL, jsonLd } from "@/lib/seo";
+import { KAYZ_URL, SPARKLE_URL, jsonLd, STUDIO_EMAIL, STUDIO_PHONE, STUDIO_PHONE_TEL, STUDIO_LOCATION, STUDIO_EST, SOCIAL_INSTAGRAM, SOCIAL_FACEBOOK, SOCIAL_TIKTOK } from "@/lib/seo";
 
 export function LandingPage() {
   return (
@@ -721,6 +721,34 @@ function Footer() {
           <p className="mt-3 text-sm leading-relaxed text-muted">
             Black-owned, woman-led, family-owned studio in Cleveland, Ohio. Parent
             house of KayzCharmzz and True Sparkle.
+          </p>
+          <p className="mt-4 text-sm text-muted">
+            {STUDIO_LOCATION} · {STUDIO_EST}
+          </p>
+          <a
+            href={`mailto:${STUDIO_EMAIL}`}
+            className="mt-2 block min-h-11 text-sm text-fg"
+          >
+            {STUDIO_EMAIL}
+          </a>
+          <a
+            href={`tel:${STUDIO_PHONE_TEL}`}
+            className="block min-h-11 text-sm text-fg"
+          >
+            {STUDIO_PHONE}
+          </a>
+          <p className="mt-2 text-sm text-muted">
+            <a href={SOCIAL_INSTAGRAM} rel="noopener" target="_blank" className="text-fg">
+              Instagram
+            </a>
+            {" & "}
+            <a href={SOCIAL_FACEBOOK} rel="noopener" target="_blank" className="text-fg">
+              Facebook
+            </a>{" "}
+            @kayzcharmzz ·{" "}
+            <a href={SOCIAL_TIKTOK} rel="noopener" target="_blank" className="text-fg">
+              TikTok @mamk40
+            </a>
           </p>
         </div>
         <div>
